@@ -6,8 +6,8 @@ use raft::state_machine::mock::MockStateMachine;
 
 #[test]
 fn creation() {
-    let persistent_log = MockPersistentLog::new();
-    let state_machine = MockStateMachine::new();
+    let persistent_log = MockPersistentLog::default();
+    let state_machine = MockStateMachine::default();
 
-    let raft = Raft::new(persistent_log, state_machine);
+    let _raft = Raft::new(persistent_log, state_machine);
 }
